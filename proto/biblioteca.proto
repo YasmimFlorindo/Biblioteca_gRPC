@@ -1,0 +1,138 @@
+syntax = "proto3";
+
+package biblioteca;
+
+option java_multiple_files = true;
+option java_package = "br.edu.biblioteca.proto";
+option java_outer_classname = "BibliotecaProto";
+
+service BibliotecaService {
+  rpc CadastrarUsuario(CadastrarUsuarioRequest) returns (UsuarioResponse);
+  rpc CadastrarGenero(CadastrarGeneroRequest) returns (GeneroResponse);
+  rpc CadastrarLivro(CadastrarLivroRequest) returns (LivroResponse);
+
+  rpc ListarUsuarios(Empty) returns (ListaUsuariosResponse);
+  rpc ListarLivros(Empty) returns (ListaLivrosResponse);
+  rpc ListarEmprestimosAtivos(Empty) returns (ListaEmprestimosResponse);
+  rpc ListarMultas(Empty) returns (ListaMultasResponse);
+
+  rpc ConsultarLivro(ConsultarLivroRequest) returns (LivroResponse);
+  rpc ConsultarMultaUsuario(ConsultarMultaUsuarioRequest) returns (MultaUsuarioResponse);
+
+  rpc RealizarEmprestimo(EmprestimoRequest) returns (OperacaoResponse);
+  rpc DevolverLivro(DevolucaoRequest) returns (DevolucaoResponse);
+  rpc QuitarMulta(QuitarMultaRequest) returns (OperacaoResponse);
+}
+
+message Empty {}
+
+message CadastrarUsuarioRequest {
+  string nome = 1;
+  string matricula = 2;
+}
+
+message CadastrarGeneroRequest {
+  string nome = 1;
+}
+
+message CadastrarLivroRequest {
+  string titulo = 1;
+  string autor = 2;
+  int32 genero_id = 3;
+}
+
+message ConsultarLivroRequest {
+  int32 livro_id = 1;
+}
+
+message ConsultarMultaUsuarioRequest {
+  int32 usuario_id = 1;
+}
+
+message EmprestimoRequest {
+  int32 usuario_id = 1;
+  int32 livro_id = 2;
+}
+
+message DevolucaoRequest {
+  int32 emprestimo_id = 1;
+}
+
+message QuitarMultaRequest {
+  int32 multa_id = 1;
+}
+
+message UsuarioResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+  int32 id = 3;
+  string nome = 4;
+  string matricula = 5;
+}
+
+message GeneroResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+  int32 id = 3;
+  string nome = 4;
+}
+
+message LivroResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+  int32 id = 3;
+  string titulo = 4;
+  string autor = 5;
+  string genero = 6;
+  bool disponivel = 7;
+}
+
+message OperacaoResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+}
+
+message DevolucaoResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+  int32 dias_atraso = 3;
+  double valor_multa = 4;
+}
+
+message MultaUsuarioResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+  double total_pendente = 3;
+}
+
+message ListaUsuariosResponse {
+  repeated UsuarioResponse usuarios = 1;
+}
+
+message ListaLivrosResponse {
+  repeated LivroResponse livros = 1;
+}
+
+message EmprestimoResponse {
+  int32 id = 1;
+  string usuario = 2;
+  string livro = 3;
+  string data_emprestimo = 4;
+  string data_devolucao_prevista = 5;
+}
+
+message ListaEmprestimosResponse {
+  repeated EmprestimoResponse emprestimos = 1;
+}
+
+message MultaResponse {
+  int32 id = 1;
+  string usuario = 2;
+  double valor = 3;
+  int32 dias_atraso = 4;
+  bool paga = 5;
+}
+
+message ListaMultasResponse {
+  repeated MultaResponse multas = 1;
+}

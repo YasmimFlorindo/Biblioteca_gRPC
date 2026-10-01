@@ -1,0 +1,17 @@
+classpath:C:\Users\flori\.m2\repository\io\grpc\grpc-netty-shaded\1.80.0\grpc-netty-shaded-1.80.0.jar	10724556:1790881347661
+classpath:C:\Users\flori\.m2\repository\io\grpc\grpc-core\1.80.0\grpc-core-1.80.0.jar	655220:1790881348348
+classpath:C:\Users\flori\.m2\repository\com\google\guava\guava\33.5.0-android\guava-33.5.0-android.jar	2932219:1790881349144
+classpath:C:\Users\flori\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar	10763:1790881348265
+classpath:C:\Users\flori\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar	2199:1790881347964
+classpath:C:\Users\flori\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar	3819:1790881347950
+classpath:C:\Users\flori\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar	16762:1790881348468
+classpath:C:\Users\flori\.m2\repository\com\google\errorprone\error_prone_annotations\2.45.0\error_prone_annotations-2.45.0.jar	20390:1790881348501
+classpath:C:\Users\flori\.m2\repository\io\grpc\grpc-api\1.80.0\grpc-api-1.80.0.jar	339467:1790881348443
+classpath:C:\Users\flori\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.26\animal-sniffer-annotations-1.26.jar	3189:1790881348400
+classpath:C:\Users\flori\.m2\repository\io\grpc\grpc-protobuf\1.80.0\grpc-protobuf-1.80.0.jar	5203:1790881348465
+classpath:C:\Users\flori\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar	19936:1790881328946
+classpath:C:\Users\flori\.m2\repository\com\google\api\grpc\proto-google-common-protos\2.63.2\proto-google-common-protos-2.63.2.jar	2861414:1790881349450
+classpath:C:\Users\flori\.m2\repository\io\grpc\grpc-stub\1.80.0\grpc-stub-1.80.0.jar	61814:1790881348607
+classpath:C:\Users\flori\.m2\repository\com\google\protobuf\protobuf-java\4.33.6\protobuf-java-4.33.6.jar	1886534:1790881349564
+classpath:C:\Users\flori\.m2\repository\org\xerial\sqlite-jdbc\3.51.1.1\sqlite-jdbc-3.51.1.1.jar	14428404:1790881351186
+classpath:C:\Users\flori\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar	26586:1790881349053
